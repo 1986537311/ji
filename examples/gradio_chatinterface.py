@@ -1,3 +1,16 @@
+# Copyright 2022-2023 XProbe Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 from typing import Dict, List
 
 import gradio as gr
@@ -12,22 +25,28 @@ if __name__ == "__main__":
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent(
             """\
-             instructions to run:
-                 1. Install Xinference and Llama-cpp-python
-                 2. Run 'xinference --host "localhost" --port 9997' in terminal
-                 3. Run this python file in new terminal window
+            instructions to run:
 
-                 e.g. (feel free to copy)
-                 python gradio_chatinterface.py \\
-                 --endpoint http://localhost:9997 \\
-                 --model_name vicuna-v1.3 \\
-                 --model_size_in_billions 7 \\
-                 --model_format ggmlv3 \\
-                 --quantization q2_K
+                1. Install Xinference, Llama-cpp-python, and other dependencies if necessary
+                2. Run command `xinference --host "localhost"` in terminal
+                3. You should see something similar to the following output:
 
-                 If you decide to change the port number in step 2,
-                 please also change the endpoint in the arguments
-             """
+                INFO:xinference:Xinference successfully started. Endpoint: http://localhost:9997
+                INFO:xinference.core.service:Worker 127.0.0.1:21561 has been added successfully
+                INFO:xinference.deploy.worker:Xinference worker successfully started.
+
+                4. In the output, locate the endpoint. In the above case it is `http://localhost:9997`
+                5. Run this python file in new terminal window, change the endpoint accordingly
+
+                example run command (feel free to copy):
+
+                python gradio_chatinterface.py \\
+                --endpoint http://localhost:9997 \\
+                --model_name vicuna-v1.3 \\
+                --model_size_in_billions 7 \\
+                --model_format ggmlv3 \\
+                --quantization q2_K
+            """
         ),
     )
 
