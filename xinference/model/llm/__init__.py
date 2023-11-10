@@ -44,6 +44,7 @@ def _install():
     from .pytorch.core import PytorchChatModel, PytorchModel
     from .pytorch.falcon import FalconPytorchChatModel, FalconPytorchModel
     from .pytorch.llama_2 import LlamaPytorchChatModel, LlamaPytorchModel
+    from .pytorch.rwkv import RWKVPilePytorchModel
     from .pytorch.vicuna import VicunaPytorchChatModel
     from .vllm.core import VLLMChatModel, VLLMModel
 
@@ -68,6 +69,7 @@ def _install():
     LLM_CLASSES.extend(
         [
             BaichuanPytorchChatModel,
+            RWKVPilePytorchModel,
             VicunaPytorchChatModel,
             FalconPytorchChatModel,
             ChatglmPytorchChatModel,

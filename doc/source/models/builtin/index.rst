@@ -40,6 +40,7 @@ Chat & Instruction-following Models
 - :ref:`OpenBuddy v11.1 <models_builtin_openbuddy_v11.1>`
 - :ref:`Orca Mini <models_builtin_orca_mini>`
 - :ref:`Qwen Chat <models_builtin_qwen_chat>`
+- :ref:`RWKV-4-Pile <models_builtin_rwkv_4_pile>`
 - :ref:`Vicuna v1.3 <models_builtin_vicuna_v1_3>`
 - :ref:`Vicuna v1.5 <models_builtin_vicuna_v1_5>`
 - :ref:`Vicuna v1.5 16k <models_builtin_vicuna_v1_5_16k>`
